@@ -18,7 +18,7 @@ import sys
 
 def import_notebook_module(notebook_path):
     """Dynamically import notebook as a module"""
-    module_name = 'assignment'
+    module_name = 'starter_code.ipynb'
     spec = importlib.util.spec_from_loader(module_name, loader=None)
     module = importlib.util.module_from_spec(spec)
     sys.modules[module_name] = module
@@ -30,7 +30,7 @@ def import_notebook_module(notebook_path):
     return module
 
 # Then use in tests
-assignment = import_notebook_module('assignment.ipynb')
+assignment = import_notebook_module('starter_code.ipynb')
 
 def test_while_loop_even_numbers(capsys):
     """Test the while loop for printing even numbers up to 16"""
